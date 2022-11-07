@@ -1,3 +1,10 @@
+//+ uma ou mais vezes 
+//? zero ou uma vezes
+//* zero ou mais vezes
+//{n} exatamente n vezes
+//{n,} no minimo uma vez ou mais
+//{n,m} no minimo n vezes e no maximo m vezes
+
 function executa(event) {
 
 	event.preventDefault();
