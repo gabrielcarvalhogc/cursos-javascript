@@ -1,11 +1,3 @@
-/* 
-Classes de caracteres
-classes de char 
-Âncoras 
-grupos
-*/
-
-
 function executa(event) {
 
 	event.preventDefault();
