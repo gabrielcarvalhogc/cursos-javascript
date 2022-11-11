@@ -106,6 +106,9 @@ function checaCPFRepetido(cpf) {
     valoresRepetidos.forEach(valor => {
         if(valor == cpf) {
             cpfValido = false
+        } else {
+            cpfValido = true
+            //pg
         }
     })
 
