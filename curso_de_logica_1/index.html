@@ -12,14 +12,15 @@
             document.write("<br><br>")
         }
 
+        function mostra(texto) {
+            document.write(texto)
+            pulalinha();
+        }
         var ano = 2022
 
-        document.write("Flavio tem " + (ano - 1977) + " anos");
-        pulalinha();
-        document.write("Joaquim tem " + (ano - 1996) + " anos");
-        pulalinha();
-        document.write("Barney tem " + (ano - 1976) + " anos");
-        pulalinha();
+        mostra("Flavio tem " + (ano - 1977) + " anos");
+        mostra("Joaquim tem " + (ano - 1996) + " anos");
+        mostra("Barney tem " + (ano - 1976) + " anos")
 
         var idadeFlavio = 45
         var idadeJoaquim = 26
@@ -27,7 +28,7 @@
 
         var media = (idadeFlavio + idadeJoaquim + idadeBarney) /3
 
-        document.write("A média das idades é " + Math.round(media))
+        mostra("A média das idades é " + Math.round(media))
     </script>
 </body>
 </html>
