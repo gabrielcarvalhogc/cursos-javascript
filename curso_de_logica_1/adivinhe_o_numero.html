@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pulalinha() {
+            document.write("<br><br>")
+        }
+
+        function mostra(texto) {
+            document.write(texto)
+            pulalinha();
+        }
+
+        var numeroPensado = Math.round(Math.random() * 10);
+        var chute = parseInt(prompt("Digite seu chute:"));
+
+        while(true) {
+            if (chute != numeroPensado) {
+                if(chute > numeroPensado) {
+                    chute = prompt("Você errou! O número é menor.");
+                } else {
+                    chute = prompt("Você errou! O número é maior.");
+                }
+            } else {
+                mostra("Parabens você acertou!");
+                break;
+            }
+        }
+
+    </script>
+</body>
+</html>
