@@ -12,14 +12,14 @@ function calculaIMC() {
     var pesoEhValido = true;
     var alturaEhValida = true;
 
-    if(peso <= 0 || peso >= 1000) {
+    if(peso < 0 || peso >= 1000) {
+        alert("peso inválido!")
         pesoEhValido = false;    
-        peso.textContent = "peso inválido!";
     }
 
-    if(altura <= 0 || altura >= 3.00) {
+    if(altura < 0 || altura >= 3.00) {
+        alert("altura inválida!")
         alturaEhValida = false;    
-        altura.textContent = "altura inválida!";
     }
     
     if(alturaEhValida && pesoEhValido) {
