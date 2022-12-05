@@ -1,30 +1,33 @@
 var titulo = document.querySelector(".titulo");
 titulo.textContent = 'aparecida nutricionista';
 
-var paciente = document.querySelector(".paciente");
+var pacientes = document.querySelectorAll(".paciente");
+
+console.log(pacientes);
 
 function calculaIMC() {
-    var peso = paciente.querySelector(".info-peso").textContent;
-    var altura = paciente.querySelector(".info-altura").textContent;
-    var tdImc = paciente.querySelector(".info-imc");
-
-
-    var pesoEhValido = true;
-    var alturaEhValida = true;
-
-    if(peso < 0 || peso >= 1000) {
-        alert("peso inválido!")
-        pesoEhValido = false;    
-    }
-
-    if(altura < 0 || altura >= 3.00) {
-        alert("altura inválida!")
-        alturaEhValida = false;    
-    }
+    for(var i = 0; i < pacientes.length; i++) {
+        var peso = pacientes[i].querySelector(".info-peso").textContent;
+        var altura = pacientes[i].querySelector(".info-altura").textContent;
+        var tdImc = pacientes[i].querySelector(".info-imc");
     
-    if(alturaEhValida && pesoEhValido) {
-        imc = peso / (altura * altura);
-        tdImc.textContent = imc;
+        var pesoEhValido = true;
+        var alturaEhValida = true;
+
+        if(peso < 0 || peso >= 1000) {
+            alert("peso inválido!")
+            pesoEhValido = false;    
+        }
+
+        if(altura < 0 || altura >= 3.00) {
+            alert("altura inválida!")
+            alturaEhValida = false;    
+        }
+        
+        if(alturaEhValida && pesoEhValido) {
+            imc = peso / (altura * altura);
+            tdImc.textContent = imc.toFixed(2);
+        }
     }
 }
 
