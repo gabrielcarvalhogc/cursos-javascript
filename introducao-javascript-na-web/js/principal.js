@@ -16,7 +16,8 @@ function calculaIMC() {
 
         if(peso < 0 || peso >= 1000) {
             alert("peso inválido!")
-            pesoEhValido = false;    
+            pesoEhValido = false;   
+            pacientes.style.color = "red";
         }
 
         if(altura < 0 || altura >= 3.00) {
