@@ -20,7 +20,6 @@ async function buscaEndereco(cep) {
         logradouro.value = consultaCEPConvertido.logradouro;
         estado.value = consultaCEPConvertido.uf;
 
-        console.log(consultaCEPConvertido);
         return consultaCEPConvertido;
 
     } catch (erro) {
